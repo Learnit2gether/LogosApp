@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/game_navigation"
+    app:startDestination="@id/gameWindowFragment">
+
+    <fragment
+        android:id="@+id/gameWindowFragment"
+        android:name="com.example.phonepetest.view.GameWindowFragment"
+        android:label="GameWindowFragment" />
+</navigation>
