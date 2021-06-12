@@ -19,6 +19,18 @@ class GameWindowFragment : Fragment(R.layout.layout_game_window) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = LayoutGameWindowBinding.bind(view)
+        binding.vm = viewModel
+        binding.lifecycleOwner = this
+        viewModel.requestLogos()
 
+        observeLogoModel()
+    }
+
+    private fun observeLogoModel(){
+        viewModel.logoListModelEventLd.observe(viewLifecycleOwner) { event->
+            event?.getContentIfNotHandled()?.let {
+                viewModel.getNextLogo(0)
+            }
+        }
     }
 }

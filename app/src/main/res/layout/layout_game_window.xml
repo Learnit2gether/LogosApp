@@ -22,6 +22,7 @@
             android:layout_width="@dimen/dimen_300dp"
             android:layout_height="@dimen/dimen_300dp"
             android:layout_marginTop="@dimen/dimen_16dp"
+            srcUri="@{vm.imageModelLd}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
